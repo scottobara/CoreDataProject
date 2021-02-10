@@ -13,8 +13,6 @@
 		366E0D1725D3E3E300D74C9D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 366E0D1625D3E3E300D74C9D /* Preview Assets.xcassets */; };
 		366E0D1925D3E3E300D74C9D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E0D1825D3E3E300D74C9D /* Persistence.swift */; };
 		366E0D1C25D3E3E300D74C9D /* CoreDataProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 366E0D1A25D3E3E300D74C9D /* CoreDataProject.xcdatamodeld */; };
-		366E0D2625D3E72600D74C9D /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E0D2425D3E72600D74C9D /* Movie+CoreDataClass.swift */; };
-		366E0D2725D3E72600D74C9D /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E0D2525D3E72600D74C9D /* Movie+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +24,6 @@
 		366E0D1825D3E3E300D74C9D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		366E0D1B25D3E3E300D74C9D /* CoreDataProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataProject.xcdatamodel; sourceTree = "<group>"; };
 		366E0D1D25D3E3E300D74C9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		366E0D2425D3E72600D74C9D /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataClass.swift"; sourceTree = "<group>"; };
-		366E0D2525D3E72600D74C9D /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +56,6 @@
 		366E0D0E25D3E3E200D74C9D /* CoreDataProject */ = {
 			isa = PBXGroup;
 			children = (
-				366E0D2425D3E72600D74C9D /* Movie+CoreDataClass.swift */,
-				366E0D2525D3E72600D74C9D /* Movie+CoreDataProperties.swift */,
 				366E0D0F25D3E3E200D74C9D /* CoreDataProjectApp.swift */,
 				366E0D1125D3E3E200D74C9D /* ContentView.swift */,
 				366E0D1325D3E3E300D74C9D /* Assets.xcassets */,
@@ -153,8 +147,6 @@
 				366E0D1925D3E3E300D74C9D /* Persistence.swift in Sources */,
 				366E0D1225D3E3E200D74C9D /* ContentView.swift in Sources */,
 				366E0D1C25D3E3E300D74C9D /* CoreDataProject.xcdatamodeld in Sources */,
-				366E0D2625D3E72600D74C9D /* Movie+CoreDataClass.swift in Sources */,
-				366E0D2725D3E72600D74C9D /* Movie+CoreDataProperties.swift in Sources */,
 				366E0D1025D3E3E200D74C9D /* CoreDataProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
