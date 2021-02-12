@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D64" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
-    <entity name="Wizard" representedClassName="Wizard" syncable="YES" codeGenerationType="class">
+    <entity name="Ship" representedClassName="Ship" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
-        <uniquenessConstraints>
-            <uniquenessConstraint>
-                <constraint value="name"/>
-            </uniquenessConstraint>
-        </uniquenessConstraints>
+        <attribute name="universe" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="Item" positionX="-54" positionY="9" width="128" height="44"/>
-        <element name="Wizard" positionX="-54" positionY="0" width="128" height="44"/>
+        <element name="Ship" positionX="-54" positionY="18" width="128" height="59"/>
     </elements>
 </model>
