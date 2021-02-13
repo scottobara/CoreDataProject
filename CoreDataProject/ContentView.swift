@@ -11,10 +11,22 @@ import SwiftUI
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
     @State private var lastNameFilter = "A"
+    @State private var sortKeyPath = \Singer.wrappedFirstName
+    @State private var sortAscending = true
+    @State private var filterSelected: FilterType = .contains
+    
+    enum FilterType: String, Equatable, CaseIterable {
+        case beginsWith = "BEGINSWITH"
+        case endsWith = "ENDSWITH"
+        case contains = "CONTAINS"
+        
+        var localizedName: LocalizedStringKey { LocalizedStringKey(rawValue) }
+    }
+
     
     var body: some View {
         VStack {
-            FilteredList(filterKey: "lastName", filterValue: lastNameFilter) { (singer: Singer) in
+            FilteredList(filterKey: "lastName", filterValue: lastNameFilter, beginsContainsEnds: "\(filterSelected.rawValue)[c]", sortKeyPath: sortKeyPath, sortAscending: sortAscending) { (singer: Singer) in
                 Text("\(singer.wrappedFirstName) \(singer.wrappedLastName)")
             }
 
@@ -34,12 +46,29 @@ struct ContentView: View {
                 try? self.moc.save()
             }
 
-            Button("Show A") {
-                self.lastNameFilter = "A"
+//            Button("Show A") {
+//                self.lastNameFilter = "A"
+//            }
+//
+//            Button("Show S") {
+//                self.lastNameFilter = "S"
+//            }
+            
+            Button("Reverse Order") {
+                self.sortAscending.toggle()
             }
-
-            Button("Show S") {
-                self.lastNameFilter = "S"
+            Picker(selection: $filterSelected, label: Text("title")) {
+                ForEach(Array(FilterType.allCases), id: \.self) {
+                    Text("\($0.rawValue)")
+                }
+            }
+            .padding(.horizontal)
+            .pickerStyle(SegmentedPickerStyle())
+            
+            HStack {
+                Text("Last Name \(filterSelected.rawValue): ")
+                TextField("letter", text: $lastNameFilter)
+                    .fixedSize()
             }
         }
     }

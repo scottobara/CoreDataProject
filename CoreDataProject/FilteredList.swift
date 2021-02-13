@@ -21,14 +21,9 @@ struct FilteredList<T: NSManagedObject, Content: View>: View {
         }
     }
 
-    init(filterKey: String, filterValue: String, @ViewBuilder content: @escaping (T) -> Content) {
-        fetchRequest = FetchRequest<T>(entity: T.entity(), sortDescriptors: [], predicate: NSPredicate(format: "%K BEGINSWITH %@", filterKey, filterValue))
+    
+    init(filterKey: String, filterValue: String, beginsContainsEnds: String, sortKeyPath: KeyPath<T, String>, sortAscending: Bool, @ViewBuilder content: @escaping (T) -> Content) {
+        fetchRequest = FetchRequest<T>(entity: T.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Singer.lastName, ascending: sortAscending)], predicate: NSPredicate(format: "%K \(beginsContainsEnds) %@", filterKey, filterValue))
         self.content = content
     }
 }
-
-//struct FilteredList_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FilteredList()
-//    }
-//}
